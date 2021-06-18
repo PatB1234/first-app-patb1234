@@ -1,0 +1,11 @@
+
+body {
+    background-color: beige;
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(141, 111, 66);
+}
+li {
+    font-size: large;
+}

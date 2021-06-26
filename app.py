@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from fastapi import status
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from starlette.responses import RedirectResponse
 from db import *
 
 class Item(BaseModel):
@@ -26,3 +28,7 @@ def get_db():
 @app.get("/Clear")
 def clear_db():
     return clear_table()
+
+@app.post("/login")
+def post_login():
+    return RedirectResponse("/ui/index.html", status.HTTP_302_FOUND)
